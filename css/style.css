@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Tan - Pearl';
+    src: url('../fonts/tan-pearl.otf') format('otf'),
+         url('../fonts/tan-pearl.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
