@@ -55,7 +55,7 @@ nav a:hover {
     background: darkblue;
 }
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,40 +81,71 @@ section {
     100% { opacity: 100%;  transform: translateY(0px);}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 960px) {
 
     .header{
-        font-size: 10rem;
+        font-size: 9rem;
+    }
+    .header5 {
+        font-size: 1.6rem !important; /* Force override if needed */
+        width: 650px;
+        height: 100px;
+        margin-left: -150px;
+        margin-top: -150px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .header5 {
+        font-size: 1.1rem !important; 
+        width: 350px;
+        height: 100px;
+        margin-left: -150px;
+        margin-top: -150px;
+    }
+
+}
+
+@media screen and (max-width: 468px) {
+
+    .header{
+        font-size: 4rem;
     }
     
 }
-#about{
-    border: solid 2px #5F2FCE;
+#about {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
 }
-.container{
-    width: 50%;
-    height: 100%;
-    border: solid 2px #5F2FCE;
+
+.container {
+    width: 48%;
+    padding: 20px;
 }
-.container2{
-    width: 50%;
+
+.container2 {
+     width: 400px; 
+     height: 400px; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-shrink: 0; 
+}
+.container2 img {
+    width: 100%;
     height: 100%;
-    border: solid 2px #5F2FCE;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover; 
 }
 .header5{
     text-align: left;
     font-size: 2rem;
     font-family: 'Lexend';
     font-weight: 400;
-    padding: 30px;
+    padding: 60px;
+    padding-top: 100px;
 }
 .box{
-    width: 50%; 
-    height: 500px; 
-    background-color: #723eeb;
 }
