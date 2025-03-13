@@ -4,6 +4,19 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Tan - Pearl';
+    src: url('../fonts/tan-pearl.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tan - Pearl';
+    src: url('portfolio/fonts/tan-pearl.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     margin: 0;
