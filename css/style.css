@@ -46,6 +46,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fade 1s ease-in-out;
 
 }
 
@@ -86,6 +87,7 @@ nav a:hover {
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
+
 }
 
 .hamburger .line {
@@ -94,6 +96,7 @@ nav a:hover {
     background-color: white;
     margin: 4px 0;
     transition: all 0.3s ease;
+    border-radius: 100px
 }
 
 
