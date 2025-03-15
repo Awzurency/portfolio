@@ -11,12 +11,19 @@
 </head>
 <body>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="#social" class="social-button">Social</a>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="https://linkedin.com/in/terrence-lopez-85231232b" class="social-button">Social</a>
     </nav>
     <section id="home" style="background-image: url('../images/Bg1.png');">
         <h1 class="header">Terrence</h1>
@@ -39,10 +46,10 @@
         <div class="slider-container">
             <button class="btn btn-left" id="leftButton">&#10094;</button>
             <div class="slider" id="slider">
-                <div class="card"  style="background-image: url('../images/PS.png'); background-position: center; background-size: contain;">1</div>
-                <div class="card" style="background-image: url('../images/AdobeAI.png'); background-position: center; background-size: contain;">2</div>
-                <div class="card" style="background-image: url('../images/WebHTML.png'); background-position: center; background-size: contain;">3</div>
-                <div class="card" style="background-image: url('../images/Webcss.png'); background-position: center; background-size: contain;">4</div>
+                <div class="card"  style="background-image: url('../images/PS.png'); background-position: center; background-size: contain;"></div>
+                <div class="card" style="background-image: url('../images/AdobeAI.png'); background-position: center; background-size: contain;"></div>
+                <div class="card" style="background-image: url('../images/WebHTML.png'); background-position: center; background-size: contain;"></div>
+                <div class="card" style="background-image: url('../images/Webcss.png'); background-position: center; background-size: contain;"></div>
                 <div class="card">5</div>
                 <div class="card">6</div>
                 <div class="card">7</div>
@@ -58,8 +65,8 @@
                 <div class="slider" id="slider">
                     <div class="cards"  style="background-image: url('../images/testH.png'); background-position: center; background-size: contain;"></div>
                     <div class="cards" style="background-image: url('../images/TestL.png'); background-position: center; background-size: contain;"></div>
-                    <div class="cards" style="background-image: url('../images/testS.png'); background-position: center; background-size: contain;">3</div>
-                    <div class="cards" style="background-image: url('../images/Webcss.png'); background-position: center; background-size: contain;">4</div>
+                    <div class="cards" style="background-image: url('../images/testS.png'); background-position: center; background-size: contain;"></div>
+                    <div class="cards" style="background-image: url('../images/Webcss.png'); background-position: center; background-size: contain;"></div>
                     <div class="cards">5</div>
                     <div class="cards">6</div>
                     <div class="cards">7</div>
@@ -102,6 +109,15 @@
                 slider.scrollBy({ left: 290, behavior: "smooth" });
             });
         });
+
+
+        const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+    });
     </script>
     </script>
     </script>
