@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Tan - Pearl';
+    src: url('/fonts/tan-pearl.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Tan - Pearl';
+    src: url('../fonts/tan-pearl.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tan - Pearl';
+    src: url('portfolio/fonts/tan-pearl.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root {
     --primary-color: #5F2FCE;
     --secondary-color: #ffffff;
@@ -22,13 +43,15 @@ nav {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    animation: fade 1s ease-in-out;
+
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-size: clamp(1rem, 2vw, 1.125rem);   
 }
 
 nav a:hover {
@@ -64,7 +87,7 @@ section {
     background: linear-gradient(0deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fade 1s ease-in-out;
+    animation: slides 1s ease-in-out;
 }
 #skills{
     display: flex;
@@ -86,6 +109,10 @@ section {
 
 @keyframes fade {
     0% { opacity: 0; transform: translateY(-100px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slides {
+    0% { opacity: 0; transform: translateX(-100px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
