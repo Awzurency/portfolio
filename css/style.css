@@ -107,11 +107,39 @@ section {
 
 }
 
-@media screen and (max-width: 468px) {
+@media screen and (max-width: 375px) {
 
     .header{
         font-size: 4rem;
     }
+
+    .slider-containers {
+        width: 30%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .cards {
+        min-width: 307px;
+        height: 522px;
+        background: linear-gradient(135deg, #ff7eb3, #ff758c);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        flex-shrink: 0;
+        border-radius: 30px;
+    }
+    .image{
+        width: 10%;
+        height: 10%;
+        border-radius: 10%;
+    }
+    
     
 }
 #about {
@@ -143,9 +171,112 @@ section {
     text-align: left;
     font-size: 2rem;
     font-family: 'Lexend';
-    font-weight: 400;
+    font-weight: 300;
     padding: 60px;
     padding-top: 100px;
 }
 .box{
+}
+
+.slider-container {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.slider {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    scrollbar-width: none;
+    white-space: nowrap;
+
+}
+.slider::-webkit-scrollbar {
+    display: none;
+}
+.card {
+    min-width: 351px;
+    height: 637px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+    border-radius: 30px;
+
+    
+}
+.card:hover{
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 30px;
+}
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(124, 3, 155, 0.2);
+    border: none;
+    color: #1e0063;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+.btn-left {
+    left: 0;
+}
+.btn-right {
+    right: 0;
+}
+#skills{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.text{
+    width: 80%;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+
+}
+.textP{
+    width: 80%;
+}
+
+.cards {
+    min-width: 507px;
+    height: 622px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+    border-radius: 30px;
+}
+.cards:hover{
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 30px;
+}
+.slider-containers {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
 }

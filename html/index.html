@@ -30,19 +30,73 @@
         </div>
         <div class="container2">
             <div class="box">
-                <img src="../images/Subtract.png" style="width: 100%; height: 500px;">
+                <img class="image" src="../images/Subtract.png" style="width: 90%; height: 500px;">
             </div>
         </div>
             </div>
     </section>
-    <section id="skills" style="background-image: url('../images/Bg3.png');">
-        <h1>My Skills</h1>
+    <section id="skills" class="skills" style="background-image: url('../images/Bg3.png');">
+        <div class="text"> 
+        <h1 style="font-size: 3.125rem;">Tools and Languages I Work With</h1>
+        <p style="font-size: 1.125rem; font-weight: 300;">These are the tools and programming languages I am familiar with and can confidently use at a pre-intermediate level.</p>
+        </div>
+        <div class="slider-container">
+            <button class="btn btn-left" id="leftButton">&#10094;</button>
+            <div class="slider" id="slider">
+                <div class="card"  style="background-image: url('../images/PS.png'); background-position: center; background-size: contain;"></div>
+                <div class="card" style="background-image: url('../images/AdobeAI.png'); background-position: center; background-size: contain;"></div>
+                <div class="card" style="background-image: url('../images/WebHTML.png'); background-position: center; background-size: contain;"></div>
+                <div class="card" style="background-image: url('../images/Webcss.png'); background-position: center; background-size: contain;"></div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+                <div class="card">7</div>
+            </div>
+            <button class="btn btn-right" id="rightButton">&#10095;</button>
+        </div>
+        
     </section>
     <section id="projects" style="background-image: url('../images/Bg4.png');">
-        <h1>My Projects</h1>
+
+            <div class="slider-containers">
+                <button class="btn btn-left" id="leftButton">&#10094;</button>
+                <div class="slider" id="slider">
+                    <div class="cards"  style="background-image: url('../images/testH.png'); background-position: center; background-size: contain;"></div>
+                    <div class="cards" style="background-image: url('../images/TestL.png'); background-position: center; background-size: contain;"></div>
+                    <div class="cards" style="background-image: url('../images/testS.png'); background-position: center; background-size: contain;"></div>
+                    <div class="cards" style="background-image: url('../images/Webcss.png'); background-position: center; background-size: contain;">4</div>
+                    <div class="cards">5</div>
+                    <div class="cards">6</div>
+                    <div class="cards">7</div>
+                </div>
+                <button class="btn btn-right" id="rightButton">&#10095;</button>
+            </div>
+            
+            <div class="textP"> 
+                <h1 style="font-size: 3.125rem;">Projects</h1>
+                <p style="font-size: 1.125rem; font-weight: 300;">These are the projects that i have been part on doing it as UI Designer and helped in the Front-end works as well.</p>
+                </div>
     </section>
     <section id="contact" style="background-image: url('../images/Bg5.png');">
         <h1>Contact Me</h1>
     </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slider = document.getElementById("slider");
+            const leftButton = document.getElementById("leftButton");
+            const rightButton = document.getElementById("rightButton");
+            
+            leftButton.addEventListener("click", function() {
+                slider.scrollBy({ left: -290, behavior: "smooth" });
+            });
+            
+            rightButton.addEventListener("click", function() {
+                slider.scrollBy({ left: 290, behavior: "smooth" });
+            });
+        });
+    </script>
+    </script>
+    </script>
 </body>
 </html>
