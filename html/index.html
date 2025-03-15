@@ -21,15 +21,19 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Socials</a>
         </div>
-        <a href="https://linkedin.com/in/terrence-lopez-85231232b" class="social-button">Social</a>
+        <a href="https://linkedin.com/in/terrence-lopez-85231232b" class="social-button">Contact</a>
     </nav>
     <section id="home" style="background-image: url('../images/Bg1.png');">
+        <div class="contain">
         <h1 class="header">Terrence</h1>
-        <!--
+        <h1 class="sub">IT Sophomore</h1>
+
+    </div>
+         <!--
         <h5>Designer x Developer</h5>
-        -->
+        -->   
     </section>
     <section class="about" id="about" style="background-image: url('../images/Bg2.png');">
         <div class="container">
@@ -96,30 +100,56 @@
 
 
     <script>
+        class ScrollReveal {
+            constructor(elements) {
+                this.elements = document.querySelectorAll(elements);
+                this.init();
+            }
+            
+            init() {
+                window.addEventListener("scroll", () => this.reveal());
+                this.reveal();
+            }
+            
+            reveal() {
+                this.elements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 50) {
+                        element.classList.add("show");
+                    }
+                });
+            }
+        }
+        
         document.addEventListener("DOMContentLoaded", function() {
             const slider = document.getElementById("slider");
             const leftButton = document.getElementById("leftButton");
             const rightButton = document.getElementById("rightButton");
             
             leftButton.addEventListener("click", function() {
-                slider.scrollBy({ left: -290, behavior: "smooth" });
+                slider.scrollBy({ left: -220, behavior: "smooth" });
             });
             
             rightButton.addEventListener("click", function() {
-                slider.scrollBy({ left: 290, behavior: "smooth" });
+                slider.scrollBy({ left: 220, behavior: "smooth" });
             });
+            
+            new ScrollReveal(".header5");
+            new ScrollReveal(".text");
+            new ScrollReveal(".card");
+            new ScrollReveal(".cards");
+            new ScrollReveal(".textP");
+            new ScrollReveal(".cardss");
         });
 
-
-        const hamburger = document.getElementById('hamburger');
+            const hamburger = document.getElementById('hamburger');
             const navLinks = document.getElementById('nav-links');
 
             hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
     });
-    </script>
-    </script>
+
     </script>
 </body>
 </html>
