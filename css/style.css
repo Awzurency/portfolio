@@ -130,15 +130,19 @@ section {
     flex-direction: column;
     align-items: center;
 }
+
 .header {
     font-size: clamp(4rem, 15vw, 17rem);
     text-align: center;
     font-family: 'Tan - Pearl', sans-serif;
     font-weight: 500;
-    background: linear-gradient(0deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: url('../images/noisy-texture-100x100-o16-d10-c-ffffff-t0.png'), 
+    linear-gradient(0deg, var(--primary-color), var(--secondary-color)); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-blend-mode: multiply; /* Makes noise blend with gradient */
     animation: slides 1s ease-in-out;
+    
 }
 .sub{
     font-family: 'Lexend';
@@ -418,7 +422,7 @@ section {
 
 @media (max-width: 480px) {
     .header {
-        font-size: clamp(4rem, 10vw, 6rem);
+        font-size: clamp(5rem, 10vw, 6rem);
     }
 
     .header5 {
